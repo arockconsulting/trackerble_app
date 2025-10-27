@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "BLE SaaS Tracker",
+    "slug": "ble-saas-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "O app precisa do Bluetooth para escanear e parear tags.",
+        "NSBluetoothPeripheralUsageDescription": "O app usa o Bluetooth para comunicação com tags.",
+        "NSLocationWhenInUseUsageDescription": "O app usa sua localização para registrar a posição da tag."
+      },
+      "bundleIdentifier": "com.anonymous.blesaastracker"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": [
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.anonymous.blesaastracker"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["@config-plugins/react-native-ble-plx"]
+  }
+}
